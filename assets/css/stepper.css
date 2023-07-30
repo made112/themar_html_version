@@ -31,6 +31,41 @@
     border: 2px solid rgb(38, 177, 149) !important;
      background: rgb(38, 177, 149) !important;
 }
+
+/*.stepperDiv .step.selected:before {*/
+/*    content: '\2713'; !* Unicode checkmark character *!*/
+/*    font-size: 16px; !* Adjust the size of the checkmark *!*/
+/*    color: #fff; !* Color of the checkmark *!*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*    pointer-events: none; !* Prevent clicks on the pseudo-element *!*/
+/*}*/
+/*.stepNumber {*/
+/*    display: block;*/
+/*    font-size: 16px;*/
+/*    font-weight: bold;*/
+/*    color: #333; !* Set the color for the step number *!*/
+/*    text-align: center;*/
+/*    position: absolute;*/
+/*    top: -30px;*/
+/*    left: 50%;*/
+/*    transform: translateX(-50%);*/
+/*}*/
+
+/* .stepperDiv .step:before {*/
+/*     content: '1';*/
+/*     font-size: 16px;*/
+/*     color: #26B195;*/
+/*     position: absolute;*/
+/*     top: -54%;*/
+/*     !* left: 50%; *!*/
+/*     transform: translate(-50%, -50%);*/
+/*     pointer-events: none;*/
+/*}*/
+
+
 .stepperDiv .progress {
     position: absolute;
     width: 100%;
@@ -47,6 +82,23 @@
     transition: width 1s;
     background-color: rgb(38, 177, 149);
 }
+.step {
+    /* Your existing styles for the steps go here */
+    /* For example, you can set the width, height, border-radius, etc. */
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Additional styles for the step number */
+.stepNumber {
+    font-size: 16px;
+    font-weight: bold;
+    direction: rtl; /* Set the direction to right-to-left for Arabic text */
+    unicode-bidi: bidi-override; /* Override the text direction */
+}
 .half_percent{
     width: 50%;
     position: absolute;
@@ -56,6 +108,7 @@
     transition: width 1s;
     background-color: rgb(38, 177, 149);
 }
+
 .colmplete_percent{
     width: 100%;
     position: absolute;
