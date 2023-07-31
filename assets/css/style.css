@@ -1350,13 +1350,32 @@ section {
 
 
     }
+    .sells-main{
+        align-items: end;
+    }
+    #root > div > main > div > section.shadow-lg.pb-4 > div > div > div > span.text-gray-700{
+        white-space: nowrap;
+    }
+    #root > div > main > div > section.shadow-lg.pb-4 > div > div > a > button{
+        white-space: nowrap;
+
+    }
 }
+@media (max-width: 700px){
+    .sells-main {
+        align-items: flex-start;
+    }
+}
+
 
 
 @media (min-width: 1280px) {
     section {
         padding-left: 3rem;
         padding-right: 3rem;
+    }
+    .sells-main{
+        align-items: end;
     }
 
     p {
@@ -1559,12 +1578,17 @@ input[type="checkbox"] {
     font-weight: 400;
 }
 .stepIcon {
-    font-size: 14px;
-    color: #fff; /* Set the color of the checkmark icon */
+    font-size: 18px;
+    color: #fff;
     position: absolute;
     top: 50%;
     left: 48%;
-    transform: translate(-50%, -50%); /* Center the checkmark icon */
+    transform: translate(-50%, -50%);
+    /* width: 85px; */
+    /* height: 50px; */
+    /* background-color: #e65525; */
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px #CFEEE8;
 }
 /* Style the custom checkbox when it's checked */
 input[type="checkbox"]:checked {
@@ -1721,6 +1745,10 @@ input[type='radio']:checked::before {
     --tw-bg-opacity: 1;
     background-color: rgb(80 38 177 / var(--tw-bg-opacity));
 }
+.active-step{
+    color:  rgb(38, 177, 149) ;
+    font-weight: bold;
+}
 
 .hover\:bg-transparent:hover {
     background-color: transparent;
@@ -1784,6 +1812,25 @@ input[type='radio']:checked::before {
     }
 }
 
+@media (max-width: 300px) {
+    #root > div > main > div > section.mt-8.max-w-5xl.mx-auto > section:nth-child(3) > div.lg\:grid.grid-cols-\[1fr.auto\].gap-8.space-y-8.lg\:space-y-0 > div:nth-child(2) > div > a{
+        display: none;
+    }
+    aside{
+        display: none;
+    }
+    #month_lest > div.flex.gap-4.items-center.text-gray-700.mt-4{
+        flex-direction: column;
+    }
+    .file-button{
+        display: none;
+    }
+    #root > div > main > div > section.mt-8.max-w-5xl.mx-auto > section:nth-child(3) > div.lg\:grid.grid-cols-\[1fr.auto\].gap-8.space-y-8.lg\:space-y-0 > div.border.border-text-300.p-6.rounded-2xl.row-span-2.h-full.col-start-2.row-start-1 > div > div:nth-child(3) > p.text-primary-main{
+        font-size: 14px;
+    }
+}
+
+
 @media (min-width: 768px) {
     .md\:block {
         display: block;
@@ -1792,6 +1839,7 @@ input[type='radio']:checked::before {
     .md\:inline-block {
         display: inline-block;
     }
+
 
     .md\:flex {
         display: flex;
@@ -1826,6 +1874,9 @@ input[type='radio']:checked::before {
 @media (min-width: 1024px) {
     .lg\:mr-56 {
         margin-right: 14rem;
+    }
+    .sells-main{
+        align-items: end;
     }
 
     .lg\:flex {
